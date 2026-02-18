@@ -17,7 +17,7 @@ from google.genai import types
 
 # --- CONFIGURATION ---
 API_TOKEN = "8334678189:AAFOX5_iRnpd57hFPE9cw0amGeyRfJYQNkg"
-ADMIN_ID = 123456789   # Bu yerga o‘zingizning admin ID yozing
+ADMIN_ID = 6485288387   # Bu yerga o‘zingizning admin ID yozing
 BOT_MODEL = "gemini-2.5-flash"
 
 # Bot va FSM
@@ -184,3 +184,4 @@ async def admin_panel(message: types.Message):
 if __name__ == "__main__":
     print("Bot ishladi")
     executor.start_polling(dp, skip_updates=True)
+
