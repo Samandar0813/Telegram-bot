@@ -1,8 +1,9 @@
 python-telegram-bot==20.7
-google-generativeai
+google-genai
 python-docx
 python-pptx
 aiogram==2.25.1
 python-docx
 python-pptx
+
 
