@@ -11,10 +11,10 @@ import os, json
 from datetime import datetime, timedelta
 import google.generativeai as genai
 
-# ================= TOKEN =================
-API_TOKEN = "TOKEN_YOZING"
-GEMINI_KEY = "GEMINI_API_YOZING"
-ADMIN_ID = 123456789
+API_TOKEN = os.getenv("BOT_TOKEN")
+GEMINI_KEY = os.getenv("GEMINI_KEY")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
+
 LIMIT = 5
 
 genai.configure(api_key=GEMINI_KEY)
@@ -182,3 +182,4 @@ async def admin_panel(message: types.Message):
 if __name__ == "__main__":
     print("Bot ishladi 🚀")
     executor.start_polling(dp, skip_updates=True)
+
