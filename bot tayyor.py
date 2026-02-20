@@ -18,8 +18,7 @@ ADMIN_ID = int(os.getenv("ADMIN_ID"))
 LIMIT = 5
 
 genai.configure(api_key=GEMINI_KEY)
-model = genai.GenerativeModel("gemini-pro")
-
+model = genai.GenerativeModel("gemini-1.5-flash")
 bot = Bot(token=API_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
@@ -182,4 +181,5 @@ async def admin_panel(message: types.Message):
 if __name__ == "__main__":
     print("Bot ishladi 🚀")
     executor.start_polling(dp, skip_updates=True)
+
 
